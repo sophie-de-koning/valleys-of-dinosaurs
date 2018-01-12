@@ -1,5 +1,17 @@
 <h1>Dinosaurs</h1>
 
+<h3><em>Stegosaurus!
+<br /> One little two little three little dinosaurs.
+<br />Four little five little six little dinosaurs.
+<br />Seven little eight little nine little dinosaurs.
+<br />Ten little dinosaur babies.</em>
+<br />
+<br />10 Little Dinosaurs | Kids Songs | Super Simple Songs</h3>
+
 <% @dinosaurs.each do |dinosaur| %>
-  <p><%= dinosaur.name %></p>
+  <p><%= link_to dinosaur.name, dinosaur_path(dinosaur.id) %></p>
 <% end %>
+
+<hr>
+
+<%= link_to "[New Dinosaur]", new_dinosaur_path %>
